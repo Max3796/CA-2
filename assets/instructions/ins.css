@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Poppins&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka', sans-serif;
+}
+body{
+    background-image: url("./assets/background_blur.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#x{
+    display: flex;
+    justify-content: end;
+}
+.instructions{
+    border-radius: 22px;
+    background: #D9D9D9;
+    box-shadow: 0px 0px 17px 9px rgba(0, 0, 0, 0.25);
+    width: 500px;
+    padding: 15px;
+    margin-top: 20px;
+}
+.instructions>div>h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.text{
+    padding:25px;
+}
+li{
+    font-size: 17px;
+}
+h4{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
