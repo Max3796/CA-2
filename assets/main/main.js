@@ -6,17 +6,11 @@ playNow.addEventListener("click" , nickName )
 function nickName(){
     window.location.href="./assets/nickNamePage/name.html"
 }
-// background-music.js
-var audio = new Audio("./assets/main/Spring-Flowers.mp3");
-var audioIsPlaying = false;
+// background-music
+let musicButton = document.getElementById("musicBtn");
+let backgroundMusic = document.getElementById("backgroundMusic");
 
-function playBackgroundMusic() {
-  if (!audioIsPlaying) {
-    audio.play();
-  
-    audioIsPlaying = true;
-  }
-}
-playBackgroundMusic()
-
-
+// Play the background music when the window loads
+window.addEventListener("load", function() {
+    backgroundMusic.play();
+})

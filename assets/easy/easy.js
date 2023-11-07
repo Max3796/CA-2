@@ -27,7 +27,7 @@ if (highScore !== null) {
 }
 //background music
 //  List of background music tracks
- const musicList = ["./Dramatic-Piano.mp3", "./lady-of-the-80.mp3", "./reverie.mp3"];
+ const musicList = ["./Dramatic-Piano.mp3", "./lady-of-the-80.mp3", "./reverie.mp3","./Where-will-i-go.mp3"];
 
  // Function to play a random track
  function playRandomBackgroundMusic() {

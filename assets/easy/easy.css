@@ -115,6 +115,7 @@
       justify-content: end;
       align-items: center;
       margin-right: 30px;
+      margin-left: 2px;
       top: 50px;
       left: -65px; 
       width: 100%;
@@ -123,7 +124,11 @@
     }
     p{
       font-size: 26px;
-      margin-left: 10px;
+      margin-left: 5px;
+      
+    }
+    .score>h2{
+      font-size: 26px;
     }
     .score{
       position: absolute;
@@ -133,7 +138,7 @@
       top: 50px;
       left: 40px;
       width: 100%;
-      font-size: 30px;
+      font-size: 40px;
       text-shadow: 0px 0px 8px #FFF;
   }
   .gameEnd{
@@ -151,3 +156,57 @@
     padding-top: 80px;
   }
   }
+  @media only screen and (max-width: 376px){
+    .high-score{
+      position: absolute; 
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      margin-right: 15px;
+      margin-left: 2px;
+      top: 50px;
+      left: -42px; 
+      width: 100%;
+      font-size: 20px;
+      text-shadow: 0px 0px 8px #FFF;
+    }
+    .score{
+      position: absolute;
+      display: flex;
+      margin-left: 15px;
+      align-items: center;
+      top: 50px;
+      left: 30px;
+      width: 100%;
+      font-size: 40px;
+      text-shadow: 0px 0px 8px #FFF;
+  }
+  }
+  @media only screen and (max-width: 321px){
+    .score{
+      position: absolute;
+      display: flex;
+      margin-left: 8px;
+      align-items: center;
+      top: 50px;
+      left: 10px;
+      width: 100%;
+      font-size: 40px;
+      text-shadow: 0px 0px 8px #FFF;
+  }
+  .high-score{
+    position: absolute; 
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 8px;
+    margin-left: 2px;
+    top: 50px;
+    left: -20px; 
+    right: 0px;
+    width: 100%;
+    font-size: 20px;
+    text-shadow: 0px 0px 8px #FFF;
+  }
+  }
+  
