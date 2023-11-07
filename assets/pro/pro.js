@@ -4,7 +4,7 @@ var config = {
     rows:6,
     cols:4,
     speed:5,
-    interval:14
+    interval:12
   }
   config.height = window.innerHeight;
   config.defaultSpeed = config.speed;
