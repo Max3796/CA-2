@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Piano Tiles</title>
+  <link rel="stylesheet" href="inter.css">
+  <script defer src="inter.js"></script>
+</head>
+<body>
+  <div class="canvasContainer">
+    <div class="name">
+      <h2 id="name-input"></h2>
+    </div>
+    <div class="score">
+      <h2>Score:</h2> 
+      <p id="score">0</p>
+    </div>
+    <div class="gameEnd none" id="gameEnd">
+      <h2 id="oops">Oops!</h2>
+      <br/>
+      <button onclick="restartGame()">Play Again</button>
+    </div>
+    <div class="high-score">
+        <h3>High Score:</h3>
+        <p id="high-score">0</p>
+    </div>
+    <div class="gameStart" id="gameStart">
+      Lets Start Tapping
+      <br/>
+      <button onclick="startGame()">Start</button>
+    </div>
+    <canvas class="game" id="gameCanvas"></canvas>
+  </div>
+  
+</body>
+</html>

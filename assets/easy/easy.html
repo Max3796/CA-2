@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Piano Tiles</title>
+  <link rel="stylesheet" href="easy.css">
+  <script defer src="easy.js"></script>
+</head>
+<body>
+  <audio id="background-music" controls autoplay style="display: none">
+    <source src="./Dramatic-Piano.mp3" type="audio/mpeg">
+    <source src="./lady-of-the-80.mp3" type="audio/mpeg">
+    <source src="./reverie.mp3" type="audio/mpeg">
+</audio>
+  <div class="canvasContainer">
+    <div class="text">
+      <div class="name">
+        <h2 id="name-input"></h2>
+      </div>
+      <div class="score">
+        <h2>Score:</h2> 
+        <p id="score">0</p>
+      </div>
+      <div class="gameEnd none" id="gameEnd">
+        <h2 id="oops">Oops!</h2>
+        <button onclick="restartGame()">Play Again</button>
+      </div>
+      <div class="high-score">
+          <h3>High Score:</h3>
+          <p id="high-score">0</p>
+      </div>
+    </div>
+    
+    <div class="gameStart" id="gameStart">
+      Lets Start Tapping
+      <br/>
+      <button onclick="startGame()">Start</button>
+    </div>
+    <canvas class="game" id="gameCanvas"></canvas>
+  </div>
+  
+</body>
+</html>

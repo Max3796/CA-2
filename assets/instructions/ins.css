@@ -24,6 +24,7 @@ body{
     width: 500px;
     padding: 15px;
     margin-top: 20px;
+    margin-right: 22px;
 }
 .instructions>div>h1{
     text-align: center;
@@ -39,4 +40,88 @@ li{
 h4{
     font-size: 20px;
     margin-bottom: 5px;
+}
+@media only screen and (max-width: 426px){
+    body{
+        background-image: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .instructions{
+       
+        width: 350px;
+        margin-right: 0;
+    }
+    .instructions>div>h1{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 40px;
+    }
+    .text{
+        padding:15px;
+    }
+}
+@media only screen and (max-width: 375px){
+    body{
+        background-image: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .instructions{
+       
+        width: 300px;
+        margin-right: 0;
+    }
+    .instructions>div>h1{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 35px;
+    }
+    .text{
+        padding:15px;
+    }
+    /* #x{
+        width: 15px;
+        display: flex;
+        justify-content: end;
+    } */
+}
+@media only screen and (max-width: 376px){
+    body{
+        background-image: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .instructions{
+       
+        width: 250px;
+        margin-right: 0;
+    }
+    .instructions>div>h1{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+    .text{
+        padding:15px;
+    }
+    li{
+        font-size: 12px;
+    }
+    h4{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
 }
