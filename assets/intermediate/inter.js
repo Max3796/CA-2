@@ -20,10 +20,10 @@ var isGameStarted = false;
 // Load the high score from local storage
 var highScoreElement = document.getElementById("high-score");
 console.log("highScoreElement: ", highScoreElement);
-var highScore = localStorage.getItem('highScr') ;
-if (highScore !== null) {
-  highScore = JSON.parse(highScore);
-  highScoreElement.innerText = highScore;
+var highScore1 = localStorage.getItem('highScr1') ;
+if (highScore1 !== null) {
+  highScore1 = JSON.parse(highScore1);
+  highScoreElement.innerText = highScore1;
 }
 //background music
 //  List of background music tracks
@@ -41,10 +41,10 @@ if (highScore !== null) {
  window.addEventListener("load", playRandomBackgroundMusic);
 // Update and display the high score when a new high score is achieved
 function updateHighScore() {
-  if (score > highScore) {
-    highScore = score;
-    highScoreElement.innerText = highScore;
-    localStorage.setItem('highScr', JSON.stringify(highScore));l
+  if (score > highScore1) {
+    highScore1 = score;
+    highScoreElement.innerText = highScore1;
+    localStorage.setItem('highScr1', JSON.stringify(highScore1));l
   }
 }
 //user name
