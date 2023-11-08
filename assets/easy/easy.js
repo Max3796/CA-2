@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   gameCanvas.setAttribute("height",config.height);
   gameContext.lineWidth = 0.5;
   initGame();
-},null);
+});
 // adding rows in black tile will be at random
 function addRow() {
   var black_index = Math.floor(Math.random()*config.cols);

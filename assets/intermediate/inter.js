@@ -44,7 +44,7 @@ function updateHighScore() {
   if (score > highScore1) {
     highScore1 = score;
     highScoreElement.innerText = highScore1;
-    localStorage.setItem('highScr1', JSON.stringify(highScore1));l
+    localStorage.setItem('highScr1', JSON.stringify(highScore1));
   }
 }
 //user name
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   gameCanvas.setAttribute("height",config.height);
   gameContext.lineWidth = 0.5;
   initGame();
-},null);
+});
 // adding rows in black tile will be at random
 function addRow() {
   var black_index = Math.floor(Math.random()*config.cols);
