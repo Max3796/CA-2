@@ -8,7 +8,6 @@ var config = {
   interval:19
 }
 config.height = window.innerHeight;
-config.defaultSpeed = config.speed;
 var score = 0;//initial score = 0
 var scoreElement;
 var startGameElement,endGameElement;
@@ -219,7 +218,6 @@ function displayRow(row) {
       tileRows = [];
       score = 0;
       isGameStarted = false;
-      config.speed = config.defaultSpeed;
       scoreElement.innerHTML = score;
       endGameElement.style.display="none";
       initGame();
