@@ -73,6 +73,7 @@
     cursor: pointer;
     font-size: 22px;
   }
+  /* to set initial game end to dsiplay none */
   .none{
     display: none;
   }

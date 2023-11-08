@@ -1,18 +1,19 @@
+//config of the tiles 
 var config = {
   width:300,
   height:600,
   rows:6,
   cols:4,
   speed:5,
-  interval:20
+  interval:19
 }
 config.height = window.innerHeight;
 config.defaultSpeed = config.speed;
-var score = 0;
+var score = 0;//initial score = 0
 var scoreElement;
 var startGameElement,endGameElement;
 var gameLoop;
-var tileRows = [];
+var tileRows = [];//list to store tiles that are being generated through canvas
 var gameCanvas;
 var gameContext;
 var isGameStarted = false;
@@ -44,7 +45,7 @@ function updateHighScore() {
   if (score > highScore) {
     highScore = score;
     highScoreElement.innerText = highScore;
-    localStorage.setItem('highScr', JSON.stringify(highScore));
+    localStorage.setItem('highScr', JSON.stringify(highScore));l
   }
 }
 //user name
@@ -65,7 +66,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   gameContext.lineWidth = 0.5;
   initGame();
 },null);
-
+// adding rows in black tile will be at random
 function addRow() {
   var black_index = Math.floor(Math.random()*config.cols);
   var tile_width = config.width/config.cols;
@@ -75,6 +76,7 @@ function addRow() {
     var lastRow = tileRows[tileRows.length-1];
     y = lastRow.y + lastRow.height;
   }
+  // row info
   var row = {
     x:0,
     y:y,
@@ -87,6 +89,7 @@ function addRow() {
       index:black_index,
       color:"#000000"
     },
+    //to moves the tiles from bottom to top
     increament:function(){
       if(this.y<=0){
         console.log(this.isValid);
@@ -129,6 +132,7 @@ function displayRow(row) {
       }
       row.increament();
     }
+    // game will loop untill any tile reached top or misclicked white tile
     function startGameLoop() {
       gameLoop = setInterval(function(){
         displayAllRow();
@@ -140,13 +144,13 @@ function displayRow(row) {
         displayRow(tileRows[i]);
       }
     }
-
+   // to stop the game 
     function stopGameLoop() {
       clearInterval(gameLoop);
       gameCanvas.removeEventListener("click",handleGameUserInput);
       endGameElement.style.display="block";
     }
-
+    // function to check if any tile is misclicked or reached to the top
     function handleGameUserInput(e) {
       if(!isGameStarted){
         isGameStarted = true;
@@ -183,13 +187,13 @@ function displayRow(row) {
         }
       }
     }
-
+    // function to display wrong tile is clicked 
     function displayWrongTile(row,col_number) {
       gameContext.fillStyle = "#FF0000";
       row.decreament();
       gameContext.fillRect(col_number*row.tileWidth,row.y,row.tileWidth,row.tileHeight);
     }
-
+    //setting game initials 
     function initGame(){
       gameContext.clearRect(0,0,config.width,config.height);
       for(var i=0;i<config.rows;i++){
@@ -204,11 +208,13 @@ function displayRow(row) {
         displayRow(tileRows[i]);
       }
     }
+    //start function
     function startGame() {
       endGameElement.style.display="none";
       startGameElement.style.display="none";
       gameCanvas.addEventListener("click",handleGameUserInput);
     }
+    //restart game function
     function restartGame() {
       tileRows = [];
       score = 0;

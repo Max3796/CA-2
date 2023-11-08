@@ -1,3 +1,4 @@
+//to navigate to next page
 let playNow = document.getElementById("play-now")
 console.log("playNow: ", playNow);
 
